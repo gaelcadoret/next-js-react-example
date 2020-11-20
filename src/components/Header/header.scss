@@ -1,0 +1,43 @@
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+div {
+  &.dark {
+    ul {
+      &.menu {
+        li {
+          a {
+            color: #FFFFFF;
+
+            &:hover {
+              background-color: whitesmoke;
+              color: #343434;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ul {
+    &.menu {
+      display: flex;
+
+      li {
+        a {
+          color: #343434;
+          padding: 0.5rem 1rem;
+          text-decoration: none;
+
+          &:hover {
+            background-color: #343434;
+            color: whitesmoke;
+          }
+        }
+      }
+    }
+  }
+}
