@@ -2,7 +2,18 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const DefaultLayout = ({children, menuItems}) => {
+const items = [
+    {
+        href: "/",
+        label: "Accueil"
+    },
+    {
+        href: "/about",
+        label: "A propos"
+    },
+];
+
+const DefaultLayout = ({children}) => {
     const [isDarkTheme, setIsDarkTheme] = useState(false);
 
     const toggleTheme = () => {
@@ -12,7 +23,7 @@ const DefaultLayout = ({children, menuItems}) => {
     return (
         <div className={`container ${isDarkTheme ? "dark" : ""}`}>
             <Header
-                menuItems={menuItems}
+                menuItems={items}
                 toggleTheme={toggleTheme}
             />
             <main>

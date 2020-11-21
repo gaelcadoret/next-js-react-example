@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 /**
  * Stateless component !
@@ -12,7 +13,9 @@ const Header = ({ menuItems, toggleTheme}) => (
         {
             menuItems.map((item, idx) => (
                 <li key={`item-${idx}`}>
-                    <a href={item.href}>{item.label}</a>
+                    <Link href={item.href}>
+                        <a>{item.label}</a>
+                    </Link>
                 </li>
             ))
         }

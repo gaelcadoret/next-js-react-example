@@ -3,17 +3,6 @@ import DefaultLayout from "../src/layouts/default";
 import TitleH1 from "../src/components/TitleHn";
 import Items from "../src/components/Items";
 
-const items = [
-    {
-        href: "/",
-        label: "Accueil"
-    },
-    {
-        href: "/about",
-        label: "A propos"
-    },
-];
-
 /**
  * Statefull component
  * @returns {JSX.Element}
@@ -34,7 +23,7 @@ const Home = () => {
     });
 
     return (
-        <DefaultLayout menuItems={items}>
+        <>
             <TitleH1 title="Accueil"/>
 
             <div>
@@ -46,8 +35,7 @@ const Home = () => {
             >Fetch data</button>
 
             <Items data={data} />
-
-        </DefaultLayout>
+        </>
     );
 }
 
