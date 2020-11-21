@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import DefaultLayout from "../src/layouts/default";
+
 import TitleH1 from "../src/components/TitleHn";
 import Items from "../src/components/Items";
 
